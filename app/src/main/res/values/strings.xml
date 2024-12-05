@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PersonaWay</string>
+    <string name="title_welcome_page">"Welcome to Persona Way "</string>
+    <string name="message_welcome_page">Personaway is an application that helps you recognize your personality type through DISC tests so that you can develop your full potential.</string>
+    <string name="login">Login</string>
+    <string name="signup">Register</string>
+    <string name="title_login_page">Welcome to PersonaWay</string>
+    <string name="message_login_page">Please Login to Continue</string>
+    <string name="email">Email</string>
+    <string name="hint_email">Please input email</string>
+    <string name="password">Password</string>
+    <string name="hint_password">Plase input password</string>
+    <string name="error_password">Password Salah, silahkan coba lagi</string>
+    <string name="login_to_register">Dont have an account? Sign Up</string>
+    <string name="image_auth">image</string>
+    <string name="title_signup_page">Create an Account</string>
+    <string name="hint_nama">Please input username</string>
+    <string name="register">Register</string>
+    <string name="register_to_login">Already have account? Sign In</string>
+</resources>
