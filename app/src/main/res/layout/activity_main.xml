@@ -42,35 +42,17 @@
 
     <View
         android:id="@+id/rectangle_2"
-        android:layout_width="308dp"
+        android:layout_width="360dp"
         android:layout_height="123dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/kotakmain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_user"
-        app:layout_constraintVertical_bias="0.088" />
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <TextView
-        android:id="@+id/ket_disc_kamu"
-        android:layout_width="130dp"
-        android:layout_height="85dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="top"
-        android:text="@string/disc_kamu"
-        android:textAppearance="@style/disc_kamu"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintHorizontal_bias="0.191"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <View
         android:id="@+id/download_8_"
@@ -80,7 +62,116 @@
         android:layout_centerVertical="true"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintStart_toEndOf="@+id/ket_disc_kamu"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_2" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/disc_kamu_a"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+        app:layout_constraintVertical_bias="0.433"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/disc_kamu_a"
+        android:layout_width="130dp"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:text="@string/disc_kamu_a"
+        android:textAppearance="@style/disc_kamu_a"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <TextView
+        android:id="@+id/tentang_apl"
+        android:layout_width="98dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="396dp"
+        android:gravity="top"
+        android:text="@string/tentang_apl"
+        android:textAppearance="@style/tentang_apl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_2"
+        app:layout_constraintVertical_bias="0.589" />
+
+    <View
+        android:id="@+id/garistentangapl"
+        android:layout_width="112dp"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_203"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tentang_apl" />
+
+    <TextView
+        android:id="@+id/personaway_"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="260dp"
+        android:gravity="top"
+        android:text="@string/personaway_"
+        android:textAppearance="@style/personaway_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tentang_apl"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="360dp"
+        android:layout_height="157dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personaway_"
+        app:layout_constraintVertical_bias="0.128" />
+
+    <TextView
+        android:id="@+id/mulai_test_"
+        android:layout_width="115dp"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:text="@string/mulai_test_"
+        android:textAppearance="@style/mulai_test_"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <View
+        android:id="@+id/image_2"
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/imagetest"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintStart_toEndOf="@+id/mulai_test_"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

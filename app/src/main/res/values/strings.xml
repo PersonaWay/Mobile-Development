@@ -23,4 +23,14 @@
     <string name="text_question">Dalam situasi yang membutuhkan keputusan cepat, apa yang akan kamu lakukan?</string>
     <string name="test_text_placeholder">Tulis jawaban kamu</string>
     <string name="kirim_jawaban">Kirim Jawaban</string>
+    <string name="tentang_apl">Tentang Aplikasi</string>
+    <string name="personaway_">
+    PersonaWay merupakan aplikasi yang membantu kamu mengenali tipe kepribadianmu melalui tes DISC. Sehingga kamu dapat mengembangkan potensi diri secara maksimal.\n
+    </string>
+    <string name="disc_kamu_a">
+    DISC kamu adalah \n(I) Influence: Fokus pada komunikasi, persuasi, \ndan relasi sosial.
+    </string>
+    <string name="mulai_test_">
+    Mulai Test\nDISC
+    </string>
 </resources>
