@@ -17,4 +17,6 @@
     <string name="hint_nama">Please input username</string>
     <string name="register">Register</string>
     <string name="register_to_login">Already have account? Sign In</string>
+    <string name="welcome_user">Welcome Name</string>
+    <string name="disc_kamu">DISC kamu adalah</string>
 </resources>
