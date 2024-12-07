@@ -1,4 +1,4 @@
-package com.capstone.personaway.ui
+package com.capstone.personaway.ui.onboarding
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -10,6 +10,8 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.personaway.databinding.ActivityWelcomeBinding
+import com.capstone.personaway.ui.LoginActivity
+import com.capstone.personaway.ui.RegisterActivity
 
 
 class WelcomeActivity : AppCompatActivity() {

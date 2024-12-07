@@ -13,7 +13,7 @@
         android:theme="@style/Theme.PersonaWay"
         tools:targetApi="31">
         <activity
-            android:name=".ui.WelcomeActivity"
+            android:name=".ui.onboarding.WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
@@ -25,7 +25,7 @@
             android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".ui.onboarding.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

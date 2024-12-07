@@ -1,4 +1,4 @@
-package com.capstone.personaway.ui
+package com.capstone.personaway.ui.onboarding
 
 import android.annotation.SuppressLint
 import android.content.Intent
