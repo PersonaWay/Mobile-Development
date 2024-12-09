@@ -1,4 +1,4 @@
-package com.capstone.personaway.ui
+package com.capstone.personaway.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.capstone.personaway.databinding.FragmentProfileBinding
+import com.capstone.personaway.ui.EditProfileActivity
+import com.capstone.personaway.ui.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
