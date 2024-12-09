@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.TestFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Konten Utama -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hallo ini test" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="36dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Bagian Logo -->
+            <View
+                android:id="@+id/logomain"
+                android:layout_width="148dp"
+                android:layout_height="35dp"
+                android:background="@drawable/logomain" />
+
+            <!-- Bagian Selamat Datang -->
+            <TextView
+                android:id="@+id/welcome_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/test"
+                android:textColor="@color/primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Inputan -->
+            <LinearLayout
+                android:id="@+id/llInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/kotak_secondary"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_question"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="248dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/test_text_placeholder"
+                    android:gravity="top"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+            <!-- Tombol -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/secondary"
+                android:text="@string/kirim_jawaban"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
