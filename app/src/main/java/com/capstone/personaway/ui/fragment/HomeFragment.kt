@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupAction()
+        behindtest()
     }
 
     private fun setupAction() {
@@ -34,8 +35,13 @@ class HomeFragment : Fragment() {
         binding.welcomeUser.text = "Welcome, $userName"
     }
 
+    private fun behindtest(){
+
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

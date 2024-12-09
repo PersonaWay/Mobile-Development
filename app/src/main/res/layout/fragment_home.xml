@@ -135,7 +135,7 @@
         app:layout_constraintVertical_bias="0.11" />
 
     <View
-        android:id="@+id/rectangle_1"
+        android:id="@+id/behindtest"
         android:layout_width="360dp"
         android:layout_height="157dp"
         android:layout_alignParentTop="true"
@@ -150,11 +150,11 @@
 
     <TextView
         android:id="@+id/mulai_test_"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintBottom_toBottomOf="@+id/behindtest"
+        app:layout_constraintEnd_toEndOf="@+id/behindtest"
         app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintStart_toStartOf="@+id/behindtest"
+        app:layout_constraintTop_toTopOf="@+id/behindtest"
         app:layout_constraintVertical_bias="0.529"
         android:layout_width="115dp"
         android:layout_height="72dp"
@@ -168,10 +168,10 @@
 
     <View
         android:id="@+id/image_2"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintBottom_toBottomOf="@+id/behindtest"
+        app:layout_constraintEnd_toEndOf="@+id/behindtest"
         app:layout_constraintStart_toEndOf="@+id/mulai_test_"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/behindtest"
         android:layout_width="123dp"
         android:layout_height="123dp"
         android:layout_alignParentLeft="true"

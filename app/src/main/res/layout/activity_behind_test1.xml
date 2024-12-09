@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BehindTest1">
+
+    <!-- Logo View -->
+    <View
+        android:id="@+id/logomain"
+        android:layout_width="148dp"
+        android:layout_height="35dp"
+        android:background="@drawable/logomain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        android:layout_marginTop="16dp" />
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/descbehindtest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/descbehindtest"
+        android:textAppearance="@style/personaway_"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/logomain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/descbehindtest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ImageView for Dominance -->
+            <ImageView
+                android:id="@+id/dominance"
+                android:layout_width="76dp"
+                android:layout_height="137dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/dominance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- TextView for Dominance next to ImageView -->
+            <TextView
+                android:id="@+id/behindtest2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="(D) Dominance\n Fokus pada hasil, keputusan cepat, dan kepemimpinan."
+                android:textAppearance="@style/personaway_"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dominance"
+                app:layout_constraintTop_toTopOf="@id/dominance"
+                app:layout_constraintBottom_toBottomOf="@id/dominance" />
+
+            <!-- ImageView for Influence -->
+            <ImageView
+                android:id="@+id/influence"
+                android:layout_width="76dp"
+                android:layout_height="137dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/influence"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dominance"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- TextView for Influence next to ImageView -->
+            <TextView
+                android:id="@+id/behindtest3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="(I) Influence\n Fokus pada komunikasi, persuasi, dan relasi sosial."
+                android:textAppearance="@style/personaway_"
+                app:layout_constraintStart_toEndOf="@id/influence"
+                app:layout_constraintTop_toTopOf="@id/influence"
+                app:layout_constraintBottom_toBottomOf="@id/influence"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
