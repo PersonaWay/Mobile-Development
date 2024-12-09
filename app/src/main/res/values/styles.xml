@@ -30,4 +30,11 @@
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#071952</item>
     </style>
+
+    <style name="kliklanjut">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>

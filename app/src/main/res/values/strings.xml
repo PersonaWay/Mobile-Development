@@ -39,4 +39,6 @@
     Test DISC ini merupakan test kepribadian yang dipisah dalam empat kategori yaitu :
     </string>
     <string name="behindtest2">(D) Dominance\n Fokus pada hasil, keputusan cepat, dan kepemimpinan.</string>
+    <!-- strings.xml -->
+    <string name="kliklanjut">Klik untuk Lanjut</string>
 </resources>
