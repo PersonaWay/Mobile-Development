@@ -6,16 +6,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="32dp"
+    android:paddingTop="64dp"
+    android:paddingBottom="16dp"
     tools:context=".ui.fragment.BehindTest1Fragment">
 
     <View
         android:id="@+id/logomain"
         android:layout_width="148dp"
         android:layout_height="35dp"
-        android:layout_marginTop="36dp"
         android:background="@drawable/logomain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,12 +24,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:gravity="center"
         android:text="@string/descbehindtest"
         android:textAppearance="@style/personaway_"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logomain" />
 
@@ -39,9 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/descbehindtest"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp">
+        app:layout_constraintBottom_toTopOf="@id/kliklanjut"
+        android:layout_marginVertical="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -147,30 +143,19 @@
                 app:layout_constraintStart_toEndOf="@id/complience"
                 app:layout_constraintTop_toTopOf="@id/complience" />
 
-            <View
-                android:id="@+id/rectangle_1"
-                android:layout_width="165dp"
-                android:layout_height="41dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/rectangle_1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/behindtest5" />
-
-            <TextView
-                android:id="@+id/kliklanjut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/kliklanjut"
-                android:textAppearance="@style/kliklanjut"
-                app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
-                app:layout_constraintEnd_toEndOf="@id/rectangle_1"
-                app:layout_constraintStart_toStartOf="@id/rectangle_1"
-                app:layout_constraintTop_toTopOf="@id/rectangle_1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
+    <Button
+        android:id="@+id/kliklanjut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/kliklanjut"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

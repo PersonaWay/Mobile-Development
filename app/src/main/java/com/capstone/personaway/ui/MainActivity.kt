@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.capstone.personaway.R
 import com.capstone.personaway.databinding.ActivityMainBinding
+import com.capstone.personaway.ui.fragment.BehindTest1Fragment
 import com.capstone.personaway.ui.fragment.HomeFragment
 import com.capstone.personaway.ui.fragment.ProfileFragment
 import com.capstone.personaway.ui.fragment.ResultFragment
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_test -> {
-                    replaceFragment(TestFragment())
+                    replaceFragment(BehindTest1Fragment())
                     true
                 }
                 R.id.nav_result -> {

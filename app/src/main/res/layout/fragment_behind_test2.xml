@@ -5,16 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BehindTest2">
+    tools:context=".ui.fragment.BehindTest2Fragment"
+    android:paddingHorizontal="32dp"
+    android:paddingTop="64dp"
+    android:paddingBottom="16dp">
 
     <View
         android:id="@+id/logomain"
         android:layout_width="148dp"
         android:layout_height="35dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/logomain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,27 +45,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_6" />
 
-    <View
-        android:id="@+id/rectangle_1"
-        android:layout_width="165dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="68dp"
-        android:background="@drawable/rectangle_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_disc_i"
-        app:layout_constraintVertical_bias="0.508" />
-
-    <TextView
+    <Button
         android:id="@+id/kliklanjut"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/kliklanjut"
         android:textAppearance="@style/kliklanjut"
-        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@id/rectangle_1"
-        app:layout_constraintStart_toStartOf="@id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@id/rectangle_1" />
+        android:textColor="@color/white"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
