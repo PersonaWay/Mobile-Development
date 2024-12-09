@@ -55,14 +55,8 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-        setupAction()
 
         replaceFragment(HomeFragment())
-    }
-
-    private fun setupAction() {
-        auth = Firebase.auth
-        binding.welcomeUser.text = "Welcome, ${auth.currentUser!!.displayName}"
     }
 
     private fun replaceFragment(fragment: Fragment): Boolean {
