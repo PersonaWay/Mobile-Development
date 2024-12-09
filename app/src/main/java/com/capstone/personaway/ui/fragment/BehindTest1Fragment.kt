@@ -27,7 +27,7 @@ class BehindTest1Fragment : Fragment() {
         val fragmentTransaction = parentFragmentManager.beginTransaction()
         val behindTestFragment = BehindTest2Fragment()
 
-        // Menambahkan fragment baru, atau menggantinya jika sudah ada
+
         fragmentTransaction.replace(R.id.fragment_container, behindTestFragment)
         fragmentTransaction.addToBackStack(null) // Jika ingin memungkinkan kembali ke Fragment sebelumnya
         fragmentTransaction.commit()
