@@ -5,40 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ProfileFragment"
-    android:padding="32dp">
-
-    <ImageButton
-        android:id="@+id/ibBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="32dp" />
+    android:paddingHorizontal="32dp"
+    android:paddingTop="64dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile Saya"
-        android:textSize="20sp"
         android:textColor="@color/primary"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ibBack"
-        app:layout_constraintBottom_toBottomOf="@id/ibBack" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivProfile"
         android:layout_width="160dp"
         android:layout_height="160dp"
+        android:layout_marginTop="72dp"
         android:src="@drawable/ic_profile"
-        app:layout_constraintTop_toBottomOf="@id/ibBack"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfile" />
 
     <TextView
         android:id="@+id/tvName"
@@ -116,7 +107,6 @@
         android:id="@+id/btnLogout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
         android:backgroundTint="#E7994C"
         android:text="Keluar"
         android:textColor="@color/white"
@@ -124,7 +114,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

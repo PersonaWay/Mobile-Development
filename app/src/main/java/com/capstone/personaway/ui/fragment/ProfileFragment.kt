@@ -38,11 +38,6 @@ class ProfileFragment : Fragment() {
         // Set user name
         binding.tvName.text = auth.currentUser?.displayName ?: "User"
 
-        // Back button action
-        binding.ibBack.setOnClickListener {
-            requireActivity().onBackPressedDispatcher.onBackPressed()
-        }
-
         // Navigate to EditProfileActivity
         binding.btnEdit.setOnClickListener {
             val intent = Intent(requireContext(), EditProfileActivity::class.java)
