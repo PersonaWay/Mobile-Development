@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"/>
+
     <View
         android:id="@+id/logomain"
         android:layout_width="148dp"

@@ -2,20 +2,23 @@ package com.capstone.personaway.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ViewSwitcher
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.capstone.personaway.R
 import com.capstone.personaway.databinding.ActivityMainBinding
-import com.google.firebase.Firebase
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
-
+    private lateinit var bottomBar: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +33,31 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        bottombar()
+        bottomBar = findViewById(R.id.bottom_navigation)
+        bottomBar.setOnItemSelectedListener { it ->
+            when (it.itemId) {
+                R.id.nav_home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.nav_test -> {
+                    replaceFragment(TestFragment())
+                    true
+                }
+                R.id.nav_result -> {
+                    replaceFragment(ResultFragment())
+                    true
+                }
+                R.id.nav_profile -> {
+                    replaceFragment(ProfileFragment())
+                    true
+                }
+                else -> false
+            }
+        }
         setupAction()
+
+        replaceFragment(HomeFragment())
     }
 
     private fun setupAction() {
@@ -39,30 +65,8 @@ class MainActivity : AppCompatActivity() {
         binding.welcomeUser.text = "Welcome, ${auth.currentUser!!.displayName}"
     }
 
-    private fun bottombar() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    // Pindah ke HomeActivity
-                    startActivity(Intent(this, MainActivity::class.java))
-                    true
-                }
-                R.id.nav_test -> {
-                    startActivity(Intent(this, TestActivity::class.java))
-                    true
-                }
-                R.id.nav_result -> {
-                    // Pindah ke NotificationsActivity
-                    startActivity(Intent(this, ResultActivity::class.java))
-                    true
-                }
-                R.id.nav_profile -> {
-                    // Pindah ke ProfileActivity
-                    startActivity(Intent(this, ProfileActivity::class.java))
-                    true
-                }
-                else -> false
-            }
-        }
+    private fun replaceFragment(fragment: Fragment): Boolean {
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
+        return true
     }
 }
