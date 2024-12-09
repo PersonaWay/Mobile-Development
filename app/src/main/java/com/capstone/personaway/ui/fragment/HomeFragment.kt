@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.capstone.personaway.R
 import com.capstone.personaway.databinding.FragmentHomeBinding
-import com.capstone.personaway.ui.BehindTest1
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
@@ -40,8 +40,14 @@ class HomeFragment : Fragment() {
     private fun setupBehindTestClickListener() {
         // Set click listener for the behindtest view
         binding.behindtest.setOnClickListener {
-            val intent = Intent(requireContext(), BehindTest1::class.java)
-            startActivity(intent)
+            // Periksa apakah Fragment belum ada di FragmentManager
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            val behindTestFragment = BehindTest1Fragment()
+
+            // Menambahkan fragment baru, atau menggantinya jika sudah ada
+            fragmentTransaction.replace(R.id.fragment_container, behindTestFragment)
+            fragmentTransaction.addToBackStack(null) // Jika ingin memungkinkan kembali ke Fragment sebelumnya
+            fragmentTransaction.commit()
         }
     }
 

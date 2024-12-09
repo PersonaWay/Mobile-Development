@@ -13,20 +13,12 @@
         android:theme="@style/Theme.PersonaWay"
         tools:targetApi="31">
         <activity
-            android:name=".ui.BehindTest1"
+            android:name=".ui.BehindTest2"
             android:exported="false" />
         <activity
             android:name=".ui.EditProfileActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.TestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ResultActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.onboarding.WelcomeActivity"
             android:exported="false" />

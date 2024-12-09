@@ -6,23 +6,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BehindTest1">
+    tools:context=".ui.fragment.BehindTest1Fragment">
 
-    <!-- Logo View -->
-
-    <!-- Description Text -->
     <View
         android:id="@+id/logomain"
         android:layout_width="148dp"
         android:layout_height="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/logomain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Scrollable Content -->
 
     <TextView
         android:id="@+id/descbehindtest"
@@ -55,8 +50,8 @@
             <!-- ImageView for Dominance -->
             <ImageView
                 android:id="@+id/dominance"
-                android:layout_width="76dp"
-                android:layout_height="137dp"
+                android:layout_width="66dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/dominance"
@@ -81,8 +76,8 @@
             <!-- ImageView for Influence -->
             <ImageView
                 android:id="@+id/influence"
-                android:layout_width="76dp"
-                android:layout_height="137dp"
+                android:layout_width="66dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/influence"
@@ -106,8 +101,8 @@
             <!-- ImageView for Steadness -->
             <ImageView
                 android:id="@+id/steadness"
-                android:layout_width="76dp"
-                android:layout_height="137dp"
+                android:layout_width="66dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/steadness"
@@ -130,8 +125,8 @@
 
             <ImageView
                 android:id="@+id/complience"
-                android:layout_width="76dp"
-                android:layout_height="137dp"
+                android:layout_width="66dp"
+                android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/compliance"
@@ -151,29 +146,31 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/complience"
                 app:layout_constraintTop_toTopOf="@id/complience" />
+
+            <View
+                android:id="@+id/rectangle_1"
+                android:layout_width="165dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rectangle_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/behindtest5" />
+
+            <TextView
+                android:id="@+id/kliklanjut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/kliklanjut"
+                android:textAppearance="@style/kliklanjut"
+                app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
+                app:layout_constraintEnd_toEndOf="@id/rectangle_1"
+                app:layout_constraintStart_toStartOf="@id/rectangle_1"
+                app:layout_constraintTop_toTopOf="@id/rectangle_1" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <View
-        android:id="@+id/rectangle_1"
-        android:layout_width="165dp"
-        android:layout_height="41dp"
-        android:background="@drawable/rectangle_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="1dp" />
 
-    <TextView
-        android:id="@+id/kliklanjut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/kliklanjut"
-        android:textAppearance="@style/kliklanjut"
-        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
-        app:layout_constraintTop_toTopOf="@id/rectangle_1"
-        app:layout_constraintStart_toStartOf="@id/rectangle_1"
-        app:layout_constraintEnd_toEndOf="@id/rectangle_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
