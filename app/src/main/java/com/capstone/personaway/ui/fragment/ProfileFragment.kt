@@ -1,14 +1,17 @@
 package com.capstone.personaway.ui.fragment
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.capstone.personaway.databinding.FragmentProfileBinding
 import com.capstone.personaway.ui.EditProfileActivity
 import com.capstone.personaway.ui.LoginActivity
+import com.capstone.personaway.utils.SessionManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -18,6 +21,7 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +38,7 @@ class ProfileFragment : Fragment() {
 
     private fun setupAction() {
         auth = Firebase.auth
+        sessionManager = SessionManager(requireContext())
 
         // Set user name
         binding.tvName.text = auth.currentUser?.displayName ?: "User"
@@ -44,14 +49,35 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
-        // Logout action
+        // Logout action with confirmation dialog
         binding.btnLogout.setOnClickListener {
-            auth.signOut()
-            val intent = Intent(requireContext(), LoginActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            requireActivity().finish()
+            showLogoutConfirmationDialog()
         }
+    }
+
+    private fun showLogoutConfirmationDialog() {
+        AlertDialog.Builder(requireContext()).apply {
+            setTitle("Keluar")
+            setMessage("Apakah anda ingin keluar aplikasi?")
+            setPositiveButton("Ya") { dialog, _ ->
+                performLogout()
+                dialog.dismiss()
+            }
+            setNegativeButton("Nanti dulu") { dialog, _ ->
+                dialog.dismiss()
+            }
+            create().show()
+        }
+    }
+
+    private fun performLogout() {
+        auth.signOut() // Sign out from Firebase
+        sessionManager.clearSession() // Clear saved session
+
+        val intent = Intent(requireContext(), LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        requireActivity().finish()
     }
 
     override fun onDestroyView() {

@@ -11,23 +11,34 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.personaway.databinding.ActivityWelcomeBinding
 import com.capstone.personaway.ui.LoginActivity
+import com.capstone.personaway.ui.MainActivity
 import com.capstone.personaway.ui.RegisterActivity
-
+import com.capstone.personaway.utils.SessionManager
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupView()
-        setupAction()
-        playAnimation()
+        sessionManager = SessionManager(this)
+
+        // Periksa apakah pengguna sudah login
+        if (sessionManager.isLoggedIn()) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Tutup WelcomeActivity agar tidak bisa kembali
+        } else {
+            setupView()
+            setupAction()
+            playAnimation()
+        }
     }
 
-    private fun playAnimation(){
+    private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.imageView, View.TRANSLATION_X, -30f, 30f).apply {
             duration = 6000
             repeatCount = ObjectAnimator.INFINITE
