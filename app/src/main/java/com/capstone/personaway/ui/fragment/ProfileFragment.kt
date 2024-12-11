@@ -3,6 +3,7 @@ package com.capstone.personaway.ui.fragment
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +48,10 @@ class ProfileFragment : Fragment() {
         binding.btnEdit.setOnClickListener {
             val intent = Intent(requireContext(), EditProfileActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnLanguage.setOnClickListener{
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
         }
 
         // Logout action with confirmation dialog
