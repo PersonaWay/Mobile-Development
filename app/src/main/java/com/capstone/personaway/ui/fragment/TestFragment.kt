@@ -37,8 +37,8 @@ class TestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Tombol Kirim Jawaban
-        binding.llInput.findViewById<Button>(R.id.btnKirim).setOnClickListener {
-            val userInput = binding.llInput.findViewById<EditText>(R.id.etInput).text.toString()
+        binding.btnKirim.setOnClickListener {
+            val userInput = binding.etInput.text.toString()
 
             if (userInput.isNotBlank()) {
                 sendTextToApi(userInput)
