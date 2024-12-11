@@ -15,6 +15,10 @@ class SingleResultActivity : AppCompatActivity() {
         binding = ActivitySingleResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnBack.setOnClickListener {
+            finish()
+        }
+
         val resultItem = intent.getSerializableExtra("RESULT_ITEM") as? ResultItem
         resultItem?.let {
             binding.tvResult.text = getString(R.string.hasil_test_detail)
