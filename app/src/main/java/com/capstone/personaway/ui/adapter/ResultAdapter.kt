@@ -6,20 +6,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.personaway.R
 import com.capstone.personaway.databinding.SingleResultHistoryBinding
+import com.capstone.personaway.model.ResultModel
 import java.io.Serializable
 
 class ResultAdapter(
-    private val resultList: List<ResultItem>,
-    private val onItemClick: (ResultItem) -> Unit
+    private val resultList: List<ResultModel>,
+    private val onItemClick: (ResultModel) -> Unit
 ) : RecyclerView.Adapter<ResultAdapter.ResultViewHolder>() {
 
     inner class ResultViewHolder(private val binding: SingleResultHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: ResultItem) {
-            binding.tvNumber.text = item.number.toString()
+        fun bind(item: ResultModel) {
+            binding.tvNumber.text = String.format("${adapterPosition + 1}")
             binding.tvDate.text = item.date
             binding.tvTime.text = item.time
-            binding.tvResult.text = item.result
+            binding.tvResult.text = item.data.label
             binding.root.setOnClickListener {
                 onItemClick(item)
             }
@@ -41,10 +42,3 @@ class ResultAdapter(
 
     override fun getItemCount(): Int = resultList.size
 }
-
-data class ResultItem(
-    val number: Int,
-    val date: String,
-    val time: String,
-    val result: String
-) : Serializable

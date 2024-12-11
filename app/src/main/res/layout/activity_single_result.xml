@@ -129,8 +129,8 @@
 
                 <ImageView
                     android:id="@+id/ivResultCategory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
                     android:src="@drawable/dominance" />
 
                 <TextView
@@ -151,7 +151,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/deskripsi"
                     android:textColor="@color/white"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -169,7 +169,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/pekerjaan_yang_cocok"
                     android:textColor="@color/white"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -188,7 +188,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/hubungan"
                     android:textColor="@color/white"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView

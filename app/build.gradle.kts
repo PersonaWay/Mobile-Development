@@ -57,4 +57,5 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.glide)
     implementation("com.github.Drjacky:ImagePicker:2.1.13")
+    implementation(libs.picasso)
 }

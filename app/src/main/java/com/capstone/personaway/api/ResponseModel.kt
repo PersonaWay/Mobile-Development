@@ -1,11 +1,13 @@
 package com.capstone.personaway.api
 
-data class ResponseModel(
+import java.io.Serializable
+
+data class ResponseModel (
     val data: DataModel,
     val image_url: String,
     val prediction: Int,
     val status: String
-)
+) : Serializable
 
 data class DataModel(
     val deskripsi: String,

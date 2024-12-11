@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.capstone.personaway.model.DataModel
 import com.capstone.personaway.databinding.FragmentResultBinding
 import com.capstone.personaway.ui.adapter.ResultAdapter
-import com.capstone.personaway.ui.adapter.ResultItem
+import com.capstone.personaway.model.ResultModel
 import com.capstone.personaway.ui.SingleResultActivity
 
 class ResultFragment : Fragment() {
@@ -29,9 +30,20 @@ class ResultFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val dummyData = listOf(
-            ResultItem(1, "12-12-2024", "10:45 AM", "Dominance"),
-            ResultItem(2, "13-12-2024", "11:30 AM", "Influence"),
-            ResultItem(3, "14-12-2024", "12:15 PM", "Steadiness")
+            ResultModel(
+                DataModel(
+                    "deskripsi",
+                    "hubungan",
+                    "label",
+                    "pekerjaan",
+                    1
+                ),
+                "image_url",
+                1,
+                "status",
+                "date",
+                "time"
+            ),
         )
 
         val adapter = ResultAdapter(dummyData) { item ->
