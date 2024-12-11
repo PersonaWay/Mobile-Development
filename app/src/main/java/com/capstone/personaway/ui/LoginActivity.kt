@@ -45,7 +45,6 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(baseContext, "Welcome!", Toast.LENGTH_SHORT).show()
                         navigateToHome()
                     } else {
-                        binding.edLoginEmail.text!!.clear()
                         binding.edLoginPassword.text!!.clear()
                         Toast.makeText(baseContext, "Login failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                     }
