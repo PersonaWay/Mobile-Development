@@ -15,7 +15,7 @@ picasso = "2.71828"
 retrofit = "2.9.0"
 okhttp = "4.10.0"
 glide = "4.15.1"
-drjacky-imagepicker = "2.1.13"
+imagepicker = "2.1"
 
 
 [libraries]
@@ -35,8 +35,7 @@ retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", ver
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
-drjacky-imagepicker = { group = "com.github.Drjacky", name = "ImagePicker", version.ref = "drjacky-imagepicker" }
-
+imagepicker = { group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagepicker" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -1,5 +1,6 @@
 package com.capstone.personaway.ui
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -7,7 +8,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.personaway.databinding.ActivityEditProfileBinding
-import com.github.drjacky.imagepicker.ImagePicker
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
@@ -18,21 +19,29 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditProfileBinding
     private lateinit var auth: FirebaseAuth
 
-    // Launcher untuk menangani hasil ImagePicker
-    private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == RESULT_OK) {
-            val uri: Uri? = result.data?.data
-            if (uri != null) {
-                binding.ivProfile.setImageURI(uri) // Set gambar ke ImageView
-                uploadProfileImage(uri) // Upload ke server jika diperlukan
-            } else {
-                Toast.makeText(this, "Failed to select image", Toast.LENGTH_SHORT).show()
-            }
-        } else {
-            Toast.makeText(this, "No image selected", Toast.LENGTH_SHORT).show()
-        }
-    }
+    // Activity result launcher untuk ImagePicker
+    private val startForProfileImageResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val resultCode = result.resultCode
+            val data = result.data
 
+            if (resultCode == Activity.RESULT_OK) {
+                // Ambil URI gambar dari hasil
+                val fileUri: Uri = data?.data!!
+
+                // Tampilkan gambar di ImageView
+                binding.ivProfile.setImageURI(fileUri)
+
+                // Tambahkan logika upload gambar jika diperlukan
+                uploadProfileImage(fileUri)
+            } else if (resultCode == ImagePicker.RESULT_ERROR) {
+                // Tampilkan pesan error
+                Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+            } else {
+                // Jika proses dibatalkan
+                Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,34 +53,34 @@ class EditProfileActivity : AppCompatActivity() {
     private fun setupAction() {
         auth = Firebase.auth
 
+        // Set data awal
         binding.etName.setText(auth.currentUser?.displayName)
         binding.tvEmail.text = auth.currentUser?.email
 
+        // Simpan perubahan profil
         binding.btnSave.setOnClickListener {
             performSaveAction()
         }
 
-        binding.btnChangePassword.setOnClickListener {
-            val intent = Intent(this, ChangePasswordActivity::class.java)
-            startActivity(intent)
-        }
-
+        // Pilih gambar dari kamera atau galeri
         binding.ibEditProfile.setOnClickListener {
             openImagePicker()
         }
 
+        // Tombol kembali
         binding.ibBack.setOnClickListener {
             finish()
         }
     }
 
     private fun openImagePicker() {
-        pickImageLauncher.launch(
-            ImagePicker.with(this)
-                .crop() // Memotong gambar jika diperlukan
-                .galleryOnly() // Pilih dari galeri
-                .createIntent()
-        )
+        ImagePicker.with(this)
+            .crop() // Opsi untuk memotong gambar
+            .compress(1024) // Ukuran gambar di bawah 1MB
+            .maxResultSize(1080, 1080) // Resolusi maksimum
+            .createIntent { intent ->
+                startForProfileImageResult.launch(intent)
+            }
     }
 
     private fun performSaveAction() {

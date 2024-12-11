@@ -7,6 +7,7 @@ import com.capstone.personaway.databinding.ActivitySingleResultBinding
 import com.capstone.personaway.model.ResultModel
 import com.squareup.picasso.Picasso
 
+
 class SingleResultActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySingleResultBinding
