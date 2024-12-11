@@ -45,10 +45,10 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(BehindTest1Fragment())
                     true
                 }
-                R.id.nav_result -> {
-                    replaceFragment(ResultFragment())
-                    true
-                }
+//                R.id.nav_result -> {
+//                    replaceFragment(ResultFragment())
+//                    true
+//                }
                 R.id.nav_profile -> {
                     replaceFragment(ProfileFragment())
                     true

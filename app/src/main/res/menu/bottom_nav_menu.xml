@@ -8,10 +8,10 @@
         android:id="@+id/nav_test"
         android:icon="@drawable/ic_test"
         android:title="Test" />
-    <item
-        android:id="@+id/nav_result"
-        android:icon="@drawable/hasil"
-        android:title="Result" />
+<!--    <item-->
+<!--        android:id="@+id/nav_result"-->
+<!--        android:icon="@drawable/hasil"-->
+<!--        android:title="Result" />-->
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/profil"
