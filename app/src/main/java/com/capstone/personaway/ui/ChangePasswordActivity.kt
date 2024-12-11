@@ -12,5 +12,12 @@ class ChangePasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityChangePasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupAction()
+
+    }
+    private fun setupAction() {
+        binding.ibBack.setOnClickListener {
+            finish()
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.capstone.personaway.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.personaway.databinding.ActivityEditProfileBinding
@@ -16,6 +17,12 @@ class EditProfileActivity : AppCompatActivity() {
 
     }
     private fun setupAction() {
+
+        binding.btnChangePassword.setOnClickListener {
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.ibBack.setOnClickListener {
             finish()
         }

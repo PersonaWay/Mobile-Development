@@ -18,6 +18,9 @@
             android:name=".ui.EditProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.SingleResultActivity"
             android:exported="false" />
         <activity
