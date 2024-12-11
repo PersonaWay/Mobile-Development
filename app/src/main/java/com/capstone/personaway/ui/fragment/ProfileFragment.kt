@@ -49,7 +49,6 @@ class ProfileFragment : Fragment() {
             val intent = Intent(requireContext(), EditProfileActivity::class.java)
             startActivity(intent)
         }
-
         binding.btnLanguage.setOnClickListener{
             startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
         }
