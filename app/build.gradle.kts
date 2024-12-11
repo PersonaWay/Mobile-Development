@@ -54,4 +54,7 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.glide)
+
 }
