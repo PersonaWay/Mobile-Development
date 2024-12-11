@@ -37,6 +37,11 @@ class ProfileFragment : Fragment() {
         setupAction()
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.tvName.text = auth.currentUser?.displayName ?: "User"
+    }
+
     private fun setupAction() {
         auth = Firebase.auth
         sessionManager = SessionManager(requireContext())
