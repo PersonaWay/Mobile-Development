@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Hasil Test"
+        android:text="@string/hasil_test_detail"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Hasil Analisis"
+            android:text="@string/hasil_analisis_detail"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Tanggal Tes"
+            android:text="@string/tanggal_tes"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Waktu Tes"
+            android:text="@string/waktu_tes"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Kamu adalah orang yang"
+                    android:text="@string/kamu_adalah_orang_yang"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Dominance"
+                    android:text="@string/dominance_title"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginTop="8dp"
-                    android:text="Deskripsi:"
+                    android:text="@string/deskripsi"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -151,16 +151,7 @@
                     android:id="@+id/tvResultDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Anda merupakan seorang yang lebih berfokus pada tugas, tujuan,
-dan hasil dalam menghadapi berbagai tantangan, rintangan, dan lingkungan. Anda
-cenderung memiliki kepribadian yang tegas, percaya diri, dan berorientasi pada
-hasil. Anada memiliki keberanian dalam mengambil risiko, membuat keputusan
-cepat, dan tidak ragu untuk memengaruhi orang lain demi mencapai apa yang
-diinginkan. Namun, sifat ini juga bisa membuat mereka tampak tidak sabar,
-terlalu langsung, atau kritis terhadap orang-orang yang Anda anggap lambat atau
-kurang kompeten. Keberhasilan anda diukur dari pencapaian tujuan dengan
-efisiensi, dan sering kali termotivasi oleh kekuasaan, kontrol, atau dorongan
-untuk mengatasi tantangan besar."
+                    android:text="@string/detail_dominance"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 
@@ -169,7 +160,7 @@ untuk mengatasi tantangan besar."
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginTop="8dp"
-                    android:text="Pekerjaan yang cocok:"
+                    android:text="@string/pekerjaan_yang_cocok"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -179,7 +170,7 @@ untuk mengatasi tantangan besar."
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Manajer, Pengusaha, Direktur Proyek"
+                    android:text="@string/pekerjaan"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 
@@ -188,7 +179,7 @@ untuk mengatasi tantangan besar."
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginTop="8dp"
-                    android:text="Hubungan:"
+                    android:text="@string/hubungan"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -198,8 +189,7 @@ untuk mengatasi tantangan besar."
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:text="Seorang yang bisa menyeimbangkan sifat dominan mereka,
-seperti tipe Steadiness (S)"
+                    android:text="@string/Desc_test"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 

@@ -12,5 +12,12 @@ class EditProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupAction()
+
+    }
+    private fun setupAction() {
+        binding.ibBack.setOnClickListener {
+            finish()
+        }
     }
 }

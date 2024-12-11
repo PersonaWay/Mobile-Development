@@ -13,7 +13,7 @@
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hasil Test"
+        android:text="@string/hasil_test"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"

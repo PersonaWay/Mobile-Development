@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PersonaWay</string>
-    <string name="title_welcome_page">"Welcome to Persona Way "</string>
-    <string name="message_welcome_page">Personaway is an application that helps you recognize your personality type through DISC tests so that you can develop your full potential.</string>
+    <string name="title_welcome_page">"Welcome to Persona Way"</string>
+    <string name="message_welcome_page">PersonaWay is an application that helps you recognize your personality type through DISC tests so that you can develop your full potential.</string>
     <string name="login">Login</string>
     <string name="signup">Register</string>
     <string name="title_login_page">Welcome to PersonaWay</string>
@@ -9,39 +9,68 @@
     <string name="email">Email</string>
     <string name="hint_email">Please input email</string>
     <string name="password">Password</string>
-    <string name="hint_password">Plase input password</string>
-    <string name="error_password">Password Salah, silahkan coba lagi</string>
+    <string name="hint_password">Please input password</string>
+    <string name="error_password">Wrong password, please try again</string>
     <string name="login_to_register">Dont have an account? Sign Up</string>
-    <string name="image_auth">image</string>
+    <string name="image_auth">Image</string>
     <string name="title_signup_page">Create an Account</string>
     <string name="hint_nama">Please input username</string>
     <string name="register">Register</string>
-    <string name="register_to_login">Already have account? Sign In</string>
-    <string name="welcome_user">Welcome Name</string>
-    <string name="disc_kamu">DISC kamu adalah</string>
-    <string name="test">Yuk kenali dirimu</string>
-    <string name="text_question">Dalam situasi yang membutuhkan keputusan cepat, apa yang akan kamu lakukan?</string>
-    <string name="test_text_placeholder">Tulis jawaban kamu</string>
-    <string name="kirim_jawaban">Kirim Jawaban</string>
-    <string name="tentang_apl">Tentang Aplikasi</string>
-    <string name="personaway_">
-    PersonaWay merupakan aplikasi yang membantu kamu mengenali tipe kepribadianmu melalui tes DISC. Sehingga kamu dapat mengembangkan potensi diri secara maksimal.\n
-    </string>
-    <string name="disc_kamu_a">
-    DISC kamu adalah \n(I) Influence: Fokus pada komunikasi, persuasi, \ndan relasi sosial.
-    </string>
-    <string name="mulai_test_">
-    Mulai Test\nDISC
-    </string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="register_to_login">Already have an account? Sign In</string>
+    <string name="welcome_user">Welcome, %1$s!</string>
+    <string name="disc_kamu">Your DISC is</string>
+    <string name="test">Discover yourself</string>
+    <string name="text_question">In a situation that requires a quick decision, what will you do?</string>
+    <string name="test_text_placeholder">Write your answer</string>
+    <string name="kirim_jawaban">Submit Answer</string>
+    <string name="tentang_apl">About Application</string>
+    <string name="personaway_">PersonaWay is an application that helps you recognize your personality type through DISC tests, so you can develop your full potential.\n</string>
+    <string name="disc_kamu_a">Your DISC is \n(I) Influence: Focus on communication, persuasion, \nand social relationships.</string>
+    <string name="mulai_test_">Start DISC Test\n</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="descbehindtest">
-    Test DISC ini merupakan test kepribadian yang dipisah dalam empat kategori yaitu :
-    </string>
-    <string name="behindtest2">(D) Dominance\n Fokus pada hasil, keputusan cepat, dan kepemimpinan.</string>
-    <!-- strings.xml -->
-    <string name="kliklanjut">Klik untuk Lanjut</string>
-    <string name="test_disc_i">
-    Test DISC ini menggunakan NLP sebagai alat bantu untuk menganalisis pola jawaban pengguna secara lebih mendalam dan personal.\n\nMenganalisis Pilihan Jawaban\nMenyesuaikan Pertanyaan\nMemberikan Feedback Dinamis\nMeningkatkan Pengalaman Test\n\n\nTest ini hanya membutuhkan waktu sekitar 5 menit
-    </string>
+    <string name="descbehindtest">This DISC test is a personality test divided into four categories:</string>
+    <string name="behindtest2">(D) Dominance\n Focuses on results, quick decisions, and leadership.</string>
+    <string name="kliklanjut">Click to Continue</string>
+    <string name="test_disc_i">This DISC test uses NLP as a tool to analyze user response patterns more deeply and personally.\n\nAnalyzing Answer Choices\nAdjusting Questions\nProviding Dynamic Feedback\nEnhancing Test Experience\n\n\nThis test only takes about 5 minutes</string>
+    <string name="Dominance">D Dominance\n Focuses on results, quick decisions, and leadership.</string>
+    <string name="Influence">I Influence\n Focuses on communication, persuasion, and social relationships.</string>
+    <string name="Steadness">S Steadiness\n Focuses on stability, cooperation, and patience.</string>
+    <string name="Complience">C Compliance\n Focuses on rules, quality, and detailed analysis.</string>
+    <string name="profile_saya">My Profile</string>
+    <string name="nama_profil">Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="umpan_balik">Feedback</string>
+    <string name="bahasa">Language</string>
+    <string name="tentang_aplikasi">About Application</string>
+    <string name="keluar">Logout</string>
+    <string name="ubah_kata_sandi">Change Password</string>
+    <string name="detail_desc_sandi">Fill in the details to change the password</string>
+    <string name="kata_sandi_lama">Old Password</string>
+    <string name="kata_sandi_baru">New Password</string>
+    <string name="konfirmasi_kata_sandi_baru">Confirm New Password</string>
+    <string name="kata_sandi_minimal_8_karakter">Password must be at least 8 characters</string>
+    <string name="ganti_kata_sandi">Change Password</string>
+    <string name="profile_saya_1">My Profile</string>
+    <string name="nama_pengguna">Username</string>
+    <string name="user">John Doe</string>
+    <string name="email_profile">Email</string>
+    <string name="hint_email_profile">john@doe.com</string>
+    <string name="simpan_perubahan">Save Changes</string>
+    <string name="ganti_kata_sandi_profile">Change Password</string>
+    <string name="hello_welcome">Hello</string>
+    <string name="hasil_test">Test Results</string>
+    <string name="hasil_test_detail">Test Results</string>
+    <string name="hasil_analisis_detail">Analysis Results</string>
+    <string name="tanggal_tes">Test Date</string>
+    <string name="waktu_tes">Test Time</string>
+    <string name="kamu_adalah_orang_yang">You are someone who</string>
+    <string name="dominance_title">Dominance</string>
+    <string name="deskripsi">Description:</string>
+    <string name="detail_dominance">You are someone who is more focused on tasks, goals, and results when facing challenges, obstacles, and the environment. You tend to have a firm, confident, and results-oriented personality. You have the courage to take risks, make quick decisions, and do not hesitate to influence others to achieve what you want. However, this trait can also make you appear impatient, too direct, or critical of people you consider slow or less competent. Your success is measured by achieving goals efficiently, and you are often motivated by power, control, or the drive to overcome big challenges.</string>
+    <string name="pekerjaan_yang_cocok">Suitable Jobs:</string>
+    <string name="pekerjaan">Manager, Entrepreneur, Project Director</string>
+    <string name="hubungan">Relationships:</string>
+    <string name="Desc_test">Someone who can balance their dominant traits, like the Steadiness (S) type</string>
+    <string name="tanggal">December 7, 2024</string>
+    <string name="hasil_analisis">Analysis Results</string>
 </resources>

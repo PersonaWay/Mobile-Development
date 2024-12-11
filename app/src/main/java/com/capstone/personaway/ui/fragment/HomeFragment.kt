@@ -34,8 +34,10 @@ class HomeFragment : Fragment() {
     private fun setupAction() {
         auth = FirebaseAuth.getInstance()
         val userName = auth.currentUser?.displayName ?: "User"
-        binding.welcomeUser.text = "Welcome, $userName"
+        val welcomeMessage = getString(R.string.welcome_user, userName)
+        binding.welcomeUser.text = welcomeMessage
     }
+
 
     private fun setupBehindTestClickListener() {
         // Set click listener for the behindtest view

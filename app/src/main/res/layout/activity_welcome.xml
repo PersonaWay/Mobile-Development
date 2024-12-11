@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Hello"
+        android:text="@string/hello_welcome"
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"

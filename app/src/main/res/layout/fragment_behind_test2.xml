@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/test_disc_i"
-        android:layout_width="312dp"
-        android:layout_height="205dp"
+        android:layout_width="313dp"
+        android:layout_height="233dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
