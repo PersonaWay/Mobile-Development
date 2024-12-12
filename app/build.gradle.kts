@@ -58,4 +58,8 @@ dependencies {
     implementation(libs.glide)
     implementation (libs.imagepicker)
     implementation(libs.picasso)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
+
+
 }
