@@ -67,7 +67,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toEndOf="@+id/disc_kamu_a"
         app:layout_constraintTop_toTopOf="@+id/rectangle_2"
         app:layout_constraintVertical_bias="0.466"
         tools:src="@tools:sample/avatars" />
