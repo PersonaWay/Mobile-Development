@@ -61,9 +61,9 @@ class EditProfileActivity : AppCompatActivity() {
             performSaveAction()
         }
 
-        binding.ibEditProfile.setOnClickListener {
-            openImagePicker()
-        }
+//        binding.ibEditProfile.setOnClickListener {
+//            openImagePicker()
+//        }
 
         binding.ibBack.setOnClickListener {
             finish()
