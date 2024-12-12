@@ -180,4 +180,47 @@
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="490dp" />
 
+    <View
+        android:id="@+id/testlanjutan"
+        android:layout_width="360dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/testlanjutan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/behindtest"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <TextView
+        android:id="@+id/test_lanjutan_"
+        android:layout_width="183dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:text="@string/test_lanjutan_"
+        app:layout_constraintBottom_toBottomOf="@+id/testlanjutan"
+        app:layout_constraintEnd_toEndOf="@+id/testlanjutan"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="@+id/testlanjutan"
+        app:layout_constraintTop_toTopOf="@+id/testlanjutan"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <View
+        android:id="@+id/image_3"
+        android:layout_width="74dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fototestlanjutan"
+        app:layout_constraintBottom_toBottomOf="@+id/testlanjutan"
+        app:layout_constraintEnd_toEndOf="@+id/testlanjutan"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toEndOf="@+id/test_lanjutan_"
+        app:layout_constraintTop_toTopOf="@+id/testlanjutan"
+        app:layout_constraintVertical_bias="0.466" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

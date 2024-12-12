@@ -32,7 +32,7 @@ class EditProfileActivity : AppCompatActivity() {
                 // Tampilkan gambar di ImageView
                 binding.ivProfile.setImageURI(fileUri)
 
-                // Tambahkan logika upload gambar jika diperlukan
+                // Tambahkan logika upload gambar jika                     diperlukan
                 uploadProfileImage(fileUri)
             } else if (resultCode == ImagePicker.RESULT_ERROR) {
                 // Tampilkan pesan error

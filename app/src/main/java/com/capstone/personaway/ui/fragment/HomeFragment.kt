@@ -1,6 +1,7 @@
 package com.capstone.personaway.ui.fragment
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupAction()
         setupBehindTestClickListener()
+        setupClickTestlanjutan()
     }
 
     private fun setupAction() {
@@ -50,6 +52,19 @@ class HomeFragment : Fragment() {
             fragmentTransaction.replace(R.id.fragment_container, behindTestFragment)
             fragmentTransaction.addToBackStack(null) // Jika ingin memungkinkan kembali ke Fragment sebelumnya
             fragmentTransaction.commit()
+        }
+    }
+
+    private fun setupClickTestlanjutan() {
+        // Set click listener for the testlanjutan view
+        binding.testlanjutan.setOnClickListener {
+            binding.testlanjutan.setOnClickListener {
+                val url =
+                    "https://docs.google.com/spreadsheets/d/1fGrYSoZmoQ7nEKR1NE16_0znP1v4y6H97NjSDjj_uSU/edit?usp=sharing"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity (intent)
+            }
         }
     }
 
