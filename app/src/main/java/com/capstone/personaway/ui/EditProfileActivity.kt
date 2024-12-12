@@ -1,6 +1,7 @@
 package com.capstone.personaway.ui
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -67,6 +68,11 @@ class EditProfileActivity : AppCompatActivity() {
 
         binding.ibBack.setOnClickListener {
             finish()
+        }
+
+        binding.btnChangePassword.setOnClickListener() {
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
         }
     }
 
