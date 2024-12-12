@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.capstone.personaway.databinding.FragmentProfileBinding
 import com.capstone.personaway.ui.EditProfileActivity
 import com.capstone.personaway.ui.LoginActivity
+import com.capstone.personaway.ui.onboarding.WelcomeActivity
 import com.capstone.personaway.utils.SessionManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -83,7 +84,7 @@ class ProfileFragment : Fragment() {
         auth.signOut() // Sign out from Firebase
         sessionManager.clearSession() // Clear saved session
 
-        val intent = Intent(requireContext(), LoginActivity::class.java)
+        val intent = Intent(requireContext(), WelcomeActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
         requireActivity().finish()
