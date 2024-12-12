@@ -46,65 +46,13 @@
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvResultDetailDateLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/tanggal_tes"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/tvResultDetailTimeLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvResultDetail" />
-
-        <TextView
-            android:id="@+id/tvResultDetailTimeLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/waktu_tes"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvResultDetailDateLabel"
-            app:layout_constraintTop_toBottomOf="@id/tvResultDetail" />
-
-        <TextView
-            android:id="@+id/tvResultDetailDate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="7 Desember 2024"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toStartOf="@id/tvResultDetailTime"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvResultDetailDateLabel" />
-
-        <TextView
-            android:id="@+id/tvResultDetailTime"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="12:48:20"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvResultDetailDate"
-            app:layout_constraintTop_toBottomOf="@id/tvResultDetailTimeLabel" />
-
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/tvResultDetailTime" />
+            app:layout_constraintTop_toBottomOf="@id/tvResultDetail" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -129,8 +77,8 @@
 
                 <ImageView
                     android:id="@+id/ivResultCategory"
-                    android:layout_width="128dp"
-                    android:layout_height="128dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/dominance" />
 
                 <TextView
@@ -151,7 +99,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/deskripsi"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -169,7 +117,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/pekerjaan_yang_cocok"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -188,7 +136,7 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/hubungan"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView

@@ -67,13 +67,13 @@ class ProfileFragment : Fragment() {
 
     private fun showLogoutConfirmationDialog() {
         AlertDialog.Builder(requireContext()).apply {
-            setTitle("Keluar")
-            setMessage("Apakah anda ingin keluar aplikasi?")
-            setPositiveButton("Ya") { dialog, _ ->
+            setTitle("Logout")
+            setMessage("Do you want to exit the app?")
+            setPositiveButton("Yes") { dialog, _ ->
                 performLogout()
                 dialog.dismiss()
             }
-            setNegativeButton("Nanti dulu") { dialog, _ ->
+            setNegativeButton("Later") { dialog, _ ->
                 dialog.dismiss()
             }
             create().show()

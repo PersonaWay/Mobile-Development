@@ -31,8 +31,6 @@ class SingleResultActivity : AppCompatActivity() {
         resultItem?.let {
             binding.tvResult.text = getString(R.string.hasil_test_detail)
             binding.tvResultDetail.text = getString(R.string.hasil_analisis_detail)
-            binding.tvResultDetailDate.text = it.date
-            binding.tvResultDetailTime.text = it.time
             binding.tvResultDescription.text = it.data.deskripsi
             binding.tvResultJob.text = it.data.pekerjaan
             binding.tvResultCorrelation.text = it.data.hubungan
