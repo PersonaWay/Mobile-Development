@@ -69,6 +69,7 @@
         android:layout_centerVertical="true"
         tools:layout_editor_absoluteX="298dp"
         tools:layout_editor_absoluteY="159dp"
+        android:background="@drawable/influence"
         tools:src="@tools:sample/avatars" />
 
     <TextView
