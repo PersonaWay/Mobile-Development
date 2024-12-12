@@ -55,40 +55,22 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome_user"
         app:layout_constraintVertical_bias="0.046" />
 
+
     <View
         android:id="@+id/download_8_"
+        android:layout_width="259dp"
+        android:layout_height="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/welcomee"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toEndOf="@+id/disc_kamu_a"
         app:layout_constraintTop_toTopOf="@+id/rectangle_2"
-        app:layout_constraintVertical_bias="0.433"
-        android:layout_width="59dp"
-        android:layout_height="93dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="159dp"
-        android:background="@drawable/influence"
+        app:layout_constraintVertical_bias="0.466"
         tools:src="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/disc_kamu_a"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
-        app:layout_constraintTop_toTopOf="@+id/rectangle_2"
-        app:layout_constraintVertical_bias="0.552"
-        android:layout_width="130dp"
-        android:layout_height="85dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="top"
-        android:text="@string/disc_kamu_a"
-        android:textAppearance="@style/disc_kamu_a"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="159dp" />
 
     <TextView
         android:id="@+id/tentang_apl"
